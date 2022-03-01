@@ -10,6 +10,4 @@ function openEChatActivity({uid, metaData}) {
   return nativeNavigation.openEChatActivity(uid, metaData);
 }
 
-export default {
-  openEChatActivity,
-};
+export default openEChatActivity;

@@ -1,5 +1,3 @@
 import openEChatActivity from './src'
 
-export default {
-  openEChatActivity
-};
+export default openEChatActivity;

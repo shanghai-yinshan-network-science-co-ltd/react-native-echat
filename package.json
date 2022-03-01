@@ -1,6 +1,6 @@
 {
   "name": "react-native-ys-echat",
-  "version": "0.1.0",
+  "version": "1.0.2",
   "description": "im_echat",
   "main": "index.js",
   "module": "lib/module/index",
