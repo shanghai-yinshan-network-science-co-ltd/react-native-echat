@@ -23,25 +23,25 @@ public class YsEchatModule extends ReactContextBaseJavaModule {
     }
 
 
-  //eChat用户登录
-  @ReactMethod
-  private void openEChatActivity(String uid, String metaData) {
-    try {
-      ChatParamConfig chatParamConfig = new ChatParamConfig();
-      chatParamConfig.setUid(uid);//会员数据参数中的uid
-      chatParamConfig.setMetaData(metaData); //会员数据参数
-      chatParamConfig.setLan("id");
-      EChatSDK.openEChatActivity(getCurrentActivity(), chatParamConfig);
-    } catch (Exception e) {
+    //eChat用户登录
+    @ReactMethod
+    private void openEChatActivity(String uid, String metaData) {
+        try {
+            ChatParamConfig chatParamConfig = new ChatParamConfig();
+            chatParamConfig.setUid(uid);//会员数据参数中的uid
+            chatParamConfig.setMetaData(metaData); //会员数据参数
+            chatParamConfig.setLan("id");
+            EChatSDK.openEChatActivity(context.getCurrentActivity(), chatParamConfig);
+        } catch (Exception e) {
+        }
     }
-  }
 
     //eChat用户登录
     @ReactMethod
     private void initEchatSdk(String eChat_id, String eChat_secret) {
         try {
-    EChatSDK.init(context, eChat_id,eChat_secret);
-    EChatSDK.getInstance().setEChatServerURL("https://id.echatsoft.com/");
+            EChatSDK.init(context.getCurrentActivity().getApplication(), eChat_id,eChat_secret);
+            EChatSDK.getInstance().setEChatServerURL("https://id.echatsoft.com/");
 //       EChatSDK.setDebug(true);
         } catch (Exception e) {
         }
