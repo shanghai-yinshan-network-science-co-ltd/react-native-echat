@@ -1,13 +1,13 @@
 import {NativeModules, Platform} from 'react-native';
 
-const nativeNavigation = Platform.select({
+const native = Platform.select({
   android: NativeModules.IntentMoudle,
-  ios: NativeModules.IntentModule,
+  ios: NativeModules.YsEchat,
   default: {},
 });
 
-function openEChatActivity({uid, metaData}) {
-  return nativeNavigation.openEChatActivity(uid, metaData);
+function openEChatView({uid, metaData}) {
+  return native.openEChatActivity(uid, metaData);
 }
 
-export default openEChatActivity;
+export default openEChatView;

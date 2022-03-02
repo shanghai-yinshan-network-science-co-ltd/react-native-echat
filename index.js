@@ -1,3 +1,3 @@
-import openEChatActivity from './src'
+import openEChatView from './src'
 
-export default openEChatActivity;
+export default openEChatView;
