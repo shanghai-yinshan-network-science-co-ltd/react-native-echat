@@ -23,12 +23,16 @@ public class YsEchatModule extends ReactContextBaseJavaModule {
     }
 
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod
-    public void multiply(int a, int b, Promise promise) {
-        promise.resolve(a * b);
+  //eChat用户登录
+  @ReactMethod
+  private void openEChatActivity(String uid, String metaData) {
+    try {
+      ChatParamConfig chatParamConfig = new ChatParamConfig();
+      chatParamConfig.setUid(uid);//会员数据参数中的uid
+      chatParamConfig.setMetaData(metaData); //会员数据参数
+      chatParamConfig.setLan("id");
+      EChatSDK.openEChatActivity(getCurrentActivity(), chatParamConfig);
+    } catch (Exception e) {
     }
-
-    public static native int nativeMultiply(int a, int b);
+  }
 }

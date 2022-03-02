@@ -1,7 +1,7 @@
 import {NativeModules, Platform} from 'react-native';
 
 const native = Platform.select({
-  android: NativeModules.IntentMoudle,
+  android: NativeModules.YsEchat,
   ios: NativeModules.YsEchat,
   default: {},
 });
