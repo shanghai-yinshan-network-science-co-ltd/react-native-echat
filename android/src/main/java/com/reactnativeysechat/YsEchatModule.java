@@ -8,8 +8,6 @@ import com.facebook.react.bridge.ReactMethod;
 import com.echatsoft.echatsdk.core.EChatSDK;
 import com.echatsoft.echatsdk.model.ChatParamConfig;
 
-
-@ReactModule(name = YsEchatModule.NAME)
 public class YsEchatModule extends ReactContextBaseJavaModule {
     public static final String NAME = "YsEchat";
     private static ReactApplicationContext context;
