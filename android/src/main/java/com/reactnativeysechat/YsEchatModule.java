@@ -35,7 +35,7 @@ public class YsEchatModule extends BaseJavaModule {
       chatParamConfig.setUid(uid);//会员数据参数中的uid
       chatParamConfig.setMetaData(metaData); //会员数据参数
       chatParamConfig.setLan("id");
-      EChatSDK.openEChatActivity(getCurrentActivity(), chatParamConfig);
+      EChatSDK.openEChatActivity(context.getCurrentActivity(), chatParamConfig);
     } catch (Exception e) {
     }
   }
