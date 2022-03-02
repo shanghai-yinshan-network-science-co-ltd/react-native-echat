@@ -8,13 +8,16 @@ import com.facebook.react.bridge.ReactMethod;
 import com.echatsoft.echatsdk.core.EChatSDK;
 import com.echatsoft.echatsdk.model.ChatParamConfig;
 
-public class YsEchatModule extends ReactContextBaseJavaModule {
-    public static final String NAME = "YsEchat";
-    private static ReactApplicationContext context;
+import android.app.Application;
 
-    public YsEchatModule(ReactApplicationContext reactContext) {
-        super(reactContext);
-        context = reactContext;
+
+public class YsEchatModule extends BaseJavaModule {
+    public static final String NAME = "YsEchat";
+    private static Application context;
+
+    public YsEchatModule(Application application) {
+//         super(reactContext);
+        context = application;
     }
 
     @Override
