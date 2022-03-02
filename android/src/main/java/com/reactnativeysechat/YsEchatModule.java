@@ -2,6 +2,7 @@ package com.reactnativeysechat;
 
 import android.app.Application;
 
+import com.facebook.react.bridge.BaseJavaModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
