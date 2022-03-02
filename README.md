@@ -16,7 +16,7 @@ import openEChatView from 'react-native-ys-echat';
 openEChatView({uid,metaData});
 // ...
 
-```iOS
+```ios
 cd ios
 pod install
 
