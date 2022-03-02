@@ -29,4 +29,13 @@ RCT_EXPORT_METHOD(openEChatActivity:(NSString *)uid location:(NSString *)metaDat
     });
 }
 
+RCT_EXPORT_METHOD(initEchatSdk:(NSString *)eChat_id location:(NSString *)eChat_secret)
+{
+  dispatch_sync(dispatch_get_main_queue(), ^{
+    [EchatSDK AppID:eChat_id AppSecret:eChat_secret server:@"https://id.echatsoft.com"];
+//    [EchatSDK AppID:@"SDKLYAUQSW8U3J699CT" AppSecret:@"FBMHA7YP9VEFFAYU84EICHSCFHSIUAMZWWXWLVMUCKG" server:@"https://id.echatsoft.com"];
+  });
+}
+
+
 @end

@@ -10,4 +10,11 @@ function openEChatView({uid, metaData}) {
   return native.openEChatActivity(uid, metaData);
 }
 
-export default openEChatView;
+function initEChatSdk({eChat_id, eChat_secret}) {
+  return native.initEchatSdk(eChat_id, eChat_secret);
+}
+
+export {
+  openEChatView,
+  initEChatSdk
+};

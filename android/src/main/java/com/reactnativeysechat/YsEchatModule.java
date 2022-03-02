@@ -1,23 +1,25 @@
 package com.reactnativeysechat;
 
-import androidx.annotation.NonNull;
+import android.app.Application;
 
-import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.module.annotations.ReactModule;
+import com.echatsoft.echatsdk.core.EChatSDK;
+import com.echatsoft.echatsdk.model.ChatParamConfig;
+
 
 @ReactModule(name = YsEchatModule.NAME)
 public class YsEchatModule extends ReactContextBaseJavaModule {
     public static final String NAME = "YsEchat";
+    private static ReactApplicationContext context;
 
     public YsEchatModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        context = reactContext;
     }
 
     @Override
-    @NonNull
     public String getName() {
         return NAME;
     }
@@ -35,4 +37,15 @@ public class YsEchatModule extends ReactContextBaseJavaModule {
     } catch (Exception e) {
     }
   }
+
+    //eChat用户登录
+    @ReactMethod
+    private void initEchatSdk(String eChat_id, String eChat_secret) {
+        try {
+    EChatSDK.init(context, eChat_id,eChat_secret);
+    EChatSDK.getInstance().setEChatServerURL("https://id.echatsoft.com/");
+//       EChatSDK.setDebug(true);
+        } catch (Exception e) {
+        }
+    }
 }

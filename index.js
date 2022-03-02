@@ -1,3 +1,2 @@
-import openEChatView from './src'
+export {openEChatView, initEChatSdk} from './src'
 
-export default openEChatView;
