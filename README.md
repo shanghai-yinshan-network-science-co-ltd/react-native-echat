@@ -1,21 +1,33 @@
 # react-native-ys-echat
 
-im_echat
+echat
 
 ## Installation
 
 ```sh
-npm install react-native-ys-echat
+package.json add "react-native-ys-echat": "git+https://github.com/shanghai-yinshan-network-science-co-ltd/react-native-echat.git#Version",
+
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-ys-echat";
-
+import openEChatView from 'react-native-ys-echat';
+openEChatView({uid,metaData});
 // ...
 
-const result = await multiply(3, 7);
+```iOS
+cd ios
+pod install
+
+Appdelegate.m
+#import<EchatVisitorPort/EchatVisitorPort.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+  ....
+  [EchatSDK AppID:@"" AppSecret:@"" server:@"https://id.echatsoft.com"];
+}
+
 ```
 
 ## Contributing
