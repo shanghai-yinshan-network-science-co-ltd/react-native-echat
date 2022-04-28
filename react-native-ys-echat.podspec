@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
 
   s.dependency "React-Core"
-  s.dependency "EchatH5VisitorPort"
+  s.dependency 'EchatH5VisitorPort', '1.1.3.8'
 end
